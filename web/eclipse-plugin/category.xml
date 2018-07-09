@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <description name="GZoltar &amp; RZoltar" url="http://www.gzoltar.com/">
+      GZoltar &amp; RZoltar
+   </description>
+   <feature id="com.gzoltar.eclipse.feature" version="0.0.1.1">
+     <category name="GZRZ"/>
+   </feature>
+   <category-def name="GZRZ" label="GZoltar &amp; RZoltar"/>
+</site>

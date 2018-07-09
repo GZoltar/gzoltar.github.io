@@ -1,0 +1,178 @@
+<!DOCTYPE html
+PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="GZoltar is a framework for automating the testing and debugging phases of the software development life-cycle. At the moment, the framework is provided as a command line interface, ant task, maven plug-in, and as an Eclipse plugin; and it integrates seamlessly with JUnit tests." />
+  <title>GZoltar - Automatic Testing & Debugging using Spectrum-based Fault Localization (SFL)</title>
+
+  <!-- Icon -->
+  <link href="img/favicon.ico" rel="shortcut icon">
+
+  <!-- Bootstrap core CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap theme -->
+  <link href="css/bootstrap-theme.min.css" rel="stylesheet">
+
+  <!-- Font-Awesome -->
+  <link href="css/font-awesome.css" rel="stylesheet">
+
+  <!-- Include in here any custom local style -->
+  <link href="css/custom.css" rel="stylesheet">
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+  <script type="text/javascript">
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-99938011-1', 'auto');
+    ga('send', 'pageview');
+
+  </script>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <img src="img/logo.png" alt="" height="50" style="padding-top:5px; padding-right:10px;" />
+      </div>
+      <div id="navbar" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="https://github.com/GZoltar/gzoltar/releases/">Releases</a></li>
+          <li><a href="publications.html">Publications</a></li>
+        </ul>
+      </div><!--/.nav-collapse -->
+    </div>
+  </nav>
+
+  <!-- Container -->
+  <div class="container theme-showcase" role="main">
+
+    <div class="page-header">
+      <h1>Using GZoltar as an Eclipse Plugin</h1>
+      There is an <b>experimental</b> Eclipse plugin available using
+      the following update site:
+      <a href="web/eclipse-plugin">web/eclipse-plugin</a>.
+
+      <br /><br />
+      <div align="center">
+        <iframe width="853" height="480" src="https://www.youtube.com/embed/U3x9Y1omto8?rel=0&vq=hd720" frameborder="0" allowfullscreen></iframe>
+      </div>
+
+      <h3>Quick reference manual (under construction)</h3>
+
+      By clicking on Refresh (CTRL-F5), you can run all tests in a
+      project. If this has already been done, you can select a
+      (recently computed) set of tests and click on Re-Run to execute
+      its tests again. <br /><br />
+      <div align="center">
+        <img src="img/rzoltar1.png" alt="rzoltar1" style="width:75%;"/>
+        <br /><br />
+        <img src="img/rzoltar2.png" alt="rzoltar2" style="width:45%;"/>
+      </div>
+
+      <br /><br />
+      With the graphical interface you can visualize the potential
+      faulty elements (project, packages, source files, classes,
+      methods, and lines). These visualizations give an excellent
+      overview of the projects' structure. You can choose the
+      visualization by clicking on one of the three top right buttons
+      (Sunburst, Vertical Partition and Bubble Hierarchy). <br /><br />
+      <div align="center">
+        <img src="img/gzoltar1.png" alt="gzoltar1" style="width:75%;"/>
+        <br /><br />
+        <img src="img/gzoltar2.png" alt="gzoltar2" style="width:75%;"/>
+        <br /><br />
+        <img src="img/gzoltar3.png" alt="gzoltar2" style="width:75%;"/>
+      </div>
+
+      <br />
+      The colors represent the elements' likelihood. The green color
+      means that the element has 0% probability of being faulty,
+      whereas the yellow color means that the element has medium
+      failure probability. The red color means that the element has
+      high failure probability, thus the developer should inspect
+      these elements first in his quest for finding the root cause of
+      observed failures.<br /><br />
+      If you double click in an element, it zoomed in and after that
+      if you click with the right button, you go to the initial state.
+      Or simply use your mouse wheel to zoom in or out. You can click
+      and drag the visualization too. <br /><br />
+      <div align="center">
+        <img src="img/gzoltar4.png" alt="gzoltar4" style="width:75%;"/>
+        <br /><br />
+        <img src="img/gzoltar5.png" alt="gzoltar5" style="width:75%;"/>
+        <br /><br />
+        <img src="img/gzoltar6.png" alt="gzoltar6" style="width:75%;"/>
+      </div>
+
+      <br />
+      If you hover the mouse in an element, it shows its likelihood
+      value. <br /><br />
+      <div align="center">
+        <img src="img/gzoltar7.png" alt="gzoltar7" style="width:75%;"/>
+        <br /><br />
+        <img src="img/gzoltar8.png" alt="gzoltar8" style="width:45%;"/>
+      </div>
+
+      <br />
+      For more information, see publication <a href="web/publ/11.pdf" title="Download PDF">Using HTML5
+      Visualizations in Software Fault Localization</a>.
+
+      <h3>Known limitations:</h3>
+      <!--GZoltar is an on-going project. Hence, there might be interesting
+      features that have not yet been implemented, or even unexpected
+      behavior.-->
+      <ul>
+        <li>The plugin diagnoses <b>all opened projects</b> on Eclipse.
+        If you only want to diagnose a single project, all projects
+        but that one must be closed.</li>
+      </ul>
+
+      <h3>Requirements</h3>
+      <ul>
+        <li><b>Java:</b> 8.</li>
+        <li><b>Windows 32 or 64 bits:</b> Java 32 bits, Eclipse 32 bits, Apple Safari (as GZoltar's views require WebKit. Safari for Windows can be found <a href="http://www.techspot.com/downloads/4184-safari-for-windows.html">here</a>).</li>
+        <li><b>Linux:</b> libwebkitgtk package.</li>
+        <li><b>Eclipse:</b> Luna, and Mars.</li>
+      </ul>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <img src="img/haslab.png" alt="haslab"/>
+      <img src="img/dei.png" alt="dei"/>
+      <img src="img/feup.png" alt="feup"/>
+      <p>GZoltar Project &copy; 2018 | <i class="fa fa-envelope-o" aria-hidden="true"></i> mail [at] gzoltar [dot] com</p>
+    </footer>
+  </div> <!-- /.container -->
+
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+  <!-- Bootstrap-->
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script type="text/javascript" src="js/custom.js"></script>
+
+</body>
+</html>
