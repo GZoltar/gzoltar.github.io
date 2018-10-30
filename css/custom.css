@@ -24,3 +24,11 @@ body {
 .theme-showcase .navbar .container {
   width: auto;
 }
+
+footer {
+  height: auto;
+}
+
+footer img {
+  max-width: 225px;
+}
